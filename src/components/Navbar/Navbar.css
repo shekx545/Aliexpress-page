@@ -1,0 +1,143 @@
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff4747;
+  padding: 10px 20px;
+  color: white;
+  gap: 15px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.categories-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 20px;
+  z-index: 1000;
+  margin-top: 10px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.catalog-btn {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-box {
+  display: flex;
+  flex: 1;
+  max-width: 600px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.search-btn {
+  background-color: #d4ff7d;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.nav-actions button {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.nav-actions button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff4747;
+  padding: 10px 20px;
+  color: white;
+  gap: 15px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.logo-link {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 15px;
+  margin-left: 10px;
+  border-radius: 4px;
+  display: inline-block; 
+}
+
+.nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.categories-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 20px;
+  z-index: 1000;
+  margin-top: 10px;
+}
+
+.catalog-btn {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-box {
+  display: flex;
+  flex: 1;
+  max-width: 600px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.search-btn {
+  background-color: #d4ff7d;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-weight: bold;
+}

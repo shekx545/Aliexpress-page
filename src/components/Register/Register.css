@@ -1,0 +1,70 @@
+.alert-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.modal-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.close-btn {
+  position: absolute !important;
+  top: 10px;
+  right: 10px;
+}
+
+.open-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.login-btn {
+  background-color: #d4ed00;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.login-btn:hover {
+  background-color: #c4dc00;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.create-account-btn {
+  background-color: black;
+  color: white;
+}
+
+.create-account-btn:hover {
+  background-color: #333;
+}
+
+.footer-text {
+  font-size: 10px;
+  color: #888;
+  margin-top: 20px;
+}
