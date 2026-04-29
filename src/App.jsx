@@ -4,11 +4,10 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/footer/Footer';
 
-// Pages
 import Home from './pages/home/Home';
-import AddProducts from './components/addProducts/AddProducts'; // This is Cart demo
-import CartProducts from './components/cartProducts/CartProducts'; // This is Favorites demo
-import CategoryProducts from './pages/category/CategoryProducts'; // New Category Products page
+import AddProducts from './components/addProducts/AddProducts'; 
+import CartProducts from './components/cartProducts/CartProducts'; 
+import CategoryProducts from './pages/category/CategoryProducts'; 
 
 function App() {
   return (

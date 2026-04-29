@@ -13,18 +13,15 @@ const AddProducts = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
   const dispatch = useDispatch();
   const [showSuccess, setShowSuccess] = useState(false);
-
   const calculateTotal = () => {
     return cartItems.reduce((total, item) => {
       const priceString = String(item.currentPrice || item.price || "0");
-      const cleanPrice = Number(
-        priceString
-          .split("")
-          .filter((char) => char >= "0" && char <= "9")
-          .join(""),
+      const cleanPrice = parseInt(
+        [...priceString].filter((char) => char >= "0" && char <= "9").join(""),
+        10,
       );
       const quantity = item.quantity || 1;
-      return total + cleanPrice * quantity;
+      return total + (isNaN(cleanPrice) ? 0 : cleanPrice * quantity);
     }, 0);
   };
 
@@ -42,21 +39,21 @@ const AddProducts = () => {
 
       {showSuccess && (
         <Alert variant="filled" severity="success" sx={{ mb: 2 }}>
-          Buyurtmangiz muvaffaqiyatli rasmiylashtirildi!
+          Buyurtmangiz muvaffaqiyatli qabul qilindi!
         </Alert>
       )}
 
       {cartItems.length === 0 ? (
-        <p>Savatingiz bo'sh.</p>
+        <p>Savatingiz bo'sh. Mahsulot qo'shing.</p>
       ) : (
         <div className="cart-wrapper">
           <div className="cart-items">
-            {cartItems.map((item) => (
-              <div key={item.id} className="cart-item">
+            {cartItems.map((item, index) => (
+              <div key={index} className="cart-item">
                 <div className="item-info">
                   <img
                     src={item.image || "https://via.placeholder.com/80"}
-                    alt={item.name}
+                    alt={item.name || "item"}
                   />
                   <div className="item-text">
                     <h4>{item.name || item.title}</h4>
@@ -70,7 +67,7 @@ const AddProducts = () => {
                   <button onClick={() => dispatch(decreaseQuantity(item.id))}>
                     -
                   </button>
-                  <span style={{ margin: "0 10px" }}>{item.quantity || 1}</span>
+                  <span>{item.quantity || 1}</span>
                   <button onClick={() => dispatch(increaseQuantity(item.id))}>
                     +
                   </button>
@@ -78,7 +75,7 @@ const AddProducts = () => {
 
                 <div className="item-actions">
                   <button onClick={() => dispatch(removeFromCart(item.id))}>
-                    <FaTrash /> O'chirish
+                    <FaTrash />
                   </button>
                 </div>
               </div>
@@ -86,7 +83,8 @@ const AddProducts = () => {
           </div>
 
           <div className="cart-summary">
-            <h3>Jami: {formattedSum}</h3>
+            <h3>Jami:</h3>
+            <h2>{formattedSum}</h2>
             <button className="checkout-btn" onClick={handleCheckout}>
               Rasmiylashtirish
             </button>
