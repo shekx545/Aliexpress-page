@@ -9,7 +9,6 @@ const CategoryProducts = () => {
   const { name } = useParams();
   const dispatch = useDispatch();
 
-  // Find the subcategory that matches the name
   let targetSubcategory = null;
   katalogData.catalog.forEach(cat => {
     cat.subcategories.forEach(sub => {

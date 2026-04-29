@@ -21,7 +21,6 @@ const cartSlice = createSlice({
       const id = action.payload;
       state.cartItems = state.cartItems.filter((i) => i.id !== id);
     },
-    // other reducers can be added later
   },
 });
 
